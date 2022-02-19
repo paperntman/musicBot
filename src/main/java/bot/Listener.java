@@ -24,7 +24,9 @@ public class Listener extends ListenerAdapter {
             }
             new Play(event,jda);
         } else switch(contentRaw){
-            case "나가": new Leave(event, jda); break;
+            case "나가":
+            case "나가봐":
+                new Leave(event, jda); break;
             case "들어와": new ComeOn(event, jda); break;
             case "야": new Hey(event); break;
             case "지워": new Delete(event); break;
